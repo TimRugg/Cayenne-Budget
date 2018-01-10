@@ -1,0 +1,47 @@
+body {
+	background-image: url(../images/jeppe-vadgaard-381794.jpg);
+    background-size: cover;
+    background-color: #000;
+    background-repeat: no-repeat;
+    color: #f7f4f4;
+    font-size: 16px;
+}
+
+h1 {
+	color: #f7f4f4;
+	display: inline;
+}
+
+.navbar {
+	height: 100px;
+	background-color:transparent;
+	border: none;
+}
+
+.panel-heading {
+	background-color:transparent;
+}
+
+#brand-name {
+	font-size: 3em;
+}
+
+.panel {
+	background-color:transparent;
+	border: none;
+}
+
+footer {
+	background-color:transparent;
+	border: none;
+}
+
+#logo {
+	width: 50px;
+	margin-right: 10px;
+	display: inline;
+}
+
+#credit {
+	margin-bottom: 10px;
+}
