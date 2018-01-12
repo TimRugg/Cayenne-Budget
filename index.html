@@ -20,59 +20,95 @@
   <!-- javascript -->
   <script src="assets/javascript/javascript.js"></script>
 
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
 </head>
 
 <body>
 
-	<nav class="navbar navbar-default" id='header'>
-		<div class='container' id='navContainer'>
-			    <div class='navbar-header'>
-			    	<a class='navbar-brand' href='index.html'>
-			    		<img src='assets/images/logoplaceholder.png' id='logo'>
-			    	</a>
 
-			    	<a class='navbar-brand' href='index.html' id='name'><div id='myName'>
-			    	<h1 id='brand-name'>Cayenne</h1>
-			    	</div></a>
-			    </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id='orange-header'>
+        <span class="modal-title" id="modal-title-text">Sign up</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        	<form>
+				<p id='input-name'>
+				Name:
+				</p>
+
+				<input type="name" name="name" class='input-field' id='user-name'>
+
+				<p id='input-email'>
+				Email:
+				</p>
+				<input type="email" name="email" class='input-field' id='user-email'>
+
+				<p id='input-password'>
+				Password:
+				</p>
+				<input type="password" name="psw" class='input-field' id='user-password'>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="orange-button" id='sign-up-button'>Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class='navbar-right'>
+			<a href='about.html' id='about-link'>About Us</a>
+			<a href='contact.html' id='contact-link'>Contact</a>
 		</div>
+
 	</nav>
 
 	<div class='container'>
+
 		<div class='row'>
-			<div class='col-md-1 col-lg-1 col-xl-1'>
+
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6' id='brand'>
+				<img src='assets/images/logoplaceholder.png' id='logo'><br>
+				<h1>Cayenne</h1>
 			</div>
 
-			<div class='col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7' id='mainContent'>
-				<div class='panel'>
-					<div class='panel-heading'><h1>Main Content</h1></div>
-					<div class='panel-body'>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis, lacus eu iaculis dapibus, leo mi tincidunt sapien, in bibendum orci dui a quam. Quisque at lacinia nunc. Sed aliquam nunc sit amet enim sodales vestibulum. Quisque dapibus ipsum placerat sem cursus facilisis. Donec lobortis odio et dolor efficitur, ac rhoncus ligula sagittis. Curabitur quis tellus finibus, aliquam ex vitae, volutpat orci. Donec ac mi at nisl placerat commodo ac sagittis neque. Nunc eu risus at diam vehicula tempus. Proin auctor magna ut nisl placerat bibendum. Cras ligula quam, sagittis aliquet efficitur efficitur, imperdiet nec eros. Fusce vestibulum urna velit, nec ultricies velit luctus non. In laoreet pulvinar euismod. Nam at risus vel dui luctus pharetra in ullamcorper nibh. Curabitur sodales sollicitudin erat ac imperdiet. Suspendisse bibendum faucibus pretium. Ut consectetur, ipsum non vulputate sollicitudin, libero purus cursus massa, in venenatis purus leo quis felis.</p>
-
-						<p>Fusce id urna velit. Aliquam euismod ultricies ex at volutpat. Donec lorem erat, accumsan id tortor ut, mattis consequat arcu. Donec ultrices molestie urna ac blandit. Sed suscipit metus eget luctus faucibus. Sed elementum nibh sed sollicitudin blandit. Vestibulum congue consectetur accumsan. Ut et arcu ac urna luctus feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam vel convallis massa. Nunc orci orci, ultrices a scelerisque vel, rhoncus nec urna. Pellentesque sed congue risus. Nulla id lectus et massa posuere varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					</div>
-				</div>
+			<div class='col-xs-4 col-sm-4'>
 			</div>
 
-			<aside class='col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-6' id='sideContent'>
-				<div class='panel'>
-					<div class='panel-heading'><h1>Aside</h1></div>
-					<div class='panel-body'>
-						<p>Fusce id urna velit. Aliquam euismod ultricies ex at volutpat. Donec lorem erat, accumsan id tortor ut, mattis consequat arcu. Donec ultrices molestie urna ac blandit. Sed suscipit metus eget luctus faucibus. Sed elementum nibh sed sollicitudin blandit. Vestibulum congue consectetur accumsan.</p>
-					</div>
-				</div>
-			</aside>
+			<div class='col-xs-4 col-sm-4 col-md-6 col-lg-6 col-xl-6' id='form'>
+				<form>
+					<p id='email'>
+					Email:
+					</p>
 
-	</div>
+					<input type="text" name="username" class='input-field'>
 
-	<footer class='page-footer center-on-small-only'>
-        <div class='row'>
-            <div class='col-md-12'>
-				<a  id='credit' style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@jeppevadgaard?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jeppe Vadgaard"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Jeppe Vadgaard</span></a>
+					<p id='password'>
+					Password:
+					</p>
+					<input type="password" name="psw" class='input-field'><br>
+
+					<input type='submit' value='Log in' class='orange-button'> 
+					<button type="button" id='sign-up' data-toggle="modal" data-target="#myModal">Sign up</button>
+
+				</form>
 			</div>
+
 		</div>
 
-	</footer>
+	</div>
 
 </body>
 
