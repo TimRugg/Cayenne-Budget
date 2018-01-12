@@ -10,9 +10,18 @@ h1 {
 	font-family: 'Syncopate', sans-serif;
 }
 
+#modal-title-text {
+	font-size: 2em;
+	color: white;
+}
+
+#orange-header {
+	background-color: #f7941d;
+}
+
 .navbar {
 	height: 40px;
-	background-color:#f7941d;
+	background-color: #f7941d;
 	border: none;
 	color: #fff;
 }
@@ -72,16 +81,39 @@ a:active {
 	height: 300px;
 	padding-top: 70px;
 	padding-left: 60px;
-	width: 251px;
+
 }
 
-input {
+.input-field {
 	border: 0;
 	outline: 0;
 	border-bottom: 2px solid;
 	border-color: #bcbcbc;
 	width: 250px;
 	margin-bottom: 30px;
+}
+
+.orange-button {
+	background-color: #f7941d;
+	border: none;
+	color: white;
+	width: 80px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-right: 10px;
+}
+
+#sign-up {
+	background-color: white;
+	border: 1px #1e1e1e solid;
+	color: #1e1e1e;
+	width: 80px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.hide {
+	display: none;
 }
 
 @media only screen and (max-width: 991px) {

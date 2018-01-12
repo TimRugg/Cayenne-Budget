@@ -23,9 +23,49 @@
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
 
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
 </head>
 
 <body>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id='orange-header'>
+        <span class="modal-title" id="modal-title-text">Sign up</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        	<form>
+				<p id='input-name'>
+				Name:
+				</p>
+
+				<input type="name" name="name" class='input-field'>
+
+				<p id='input-email'>
+				Email:
+				</p>
+				<input type="email" name="email" class='input-field'>
+
+				<p id='input-password'>
+				Password:
+				</p>
+				<input type="password" name="psw" class='input-field'>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="orange-button">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class='navbar-right'>
@@ -53,13 +93,16 @@
 					Email:
 					</p>
 
-					<input type="text" name="username">
+					<input type="text" name="username" class='input-field'>
 
 					<p id='password'>
 					Password:
 					</p>
+					<input type="password" name="psw" class='input-field'><br>
 
-					<input type="password" name="psw">
+					<input type='submit' value='Log in' class='orange-button'> 
+					<button type="button" id='sign-up' data-toggle="modal" data-target="#myModal">Sign up</button>
+
 				</form>
 			</div>
 
