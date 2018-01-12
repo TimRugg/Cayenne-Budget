@@ -1,46 +1,117 @@
 body {
-	background-image: url(../images/jeppe-vadgaard-381794.jpg);
-    background-size: cover;
-    background-color: #000;
-    background-repeat: no-repeat;
-    color: #f7f4f4;
+	background-color: #fff;
+    color: #999999;
     font-size: 16px;
 }
 
 h1 {
-	color: #f7f4f4;
-	display: inline;
+	color: #1e1e1e;
+	font-size: 3.5em;
+	font-family: 'Syncopate', sans-serif;
 }
 
 .navbar {
-	height: 100px;
-	background-color:transparent;
+	height: 40px;
+	background-color:#f7941d;
 	border: none;
+	color: #fff;
 }
 
-.panel-heading {
-	background-color:transparent;
+.navbar-right {
+	margin-right: 20px;
+	margin-top: 13px;
+	width: 145px;
 }
 
-#brand-name {
-	font-size: 3em;
+#about-link {
+	padding-right: 10px;
+	border-right: 1px solid;
+	line-height: 1.3em;
 }
 
-.panel {
-	background-color:transparent;
-	border: none;
+#contact-link {
+	padding-left: 5px;
 }
 
-footer {
-	background-color:transparent;
-	border: none;
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#brand {
+	text-align: center;
+	margin-top: 100px;
 }
 
 #logo {
-	width: 50px;
-	display: inline;
+	width: 150px;
+	margin-bottom: 20px;
 }
 
-#credit {
-	margin-bottom: 10px;
+#form {
+	margin-top: 60px;
+	border-left: 2px solid #cccccc;
+	height: 300px;
+	padding-top: 70px;
+	padding-left: 60px;
+	width: 251px;
+}
+
+input {
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid;
+	border-color: #bcbcbc;
+	width: 250px;
+	margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+	.navbar-right {
+		margin-right: 20px;
+		margin-top: 13px;
+	}
+
+	#form {
+		margin: auto;
+		border: none;
+		height: 300px;
+		padding-top: 70px;
+		padding-left: 0px;
+		width: 251px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar-right {
+		margin: auto;
+		margin-top: 13px;
+	}
+
+	#form {
+		margin: auto;
+		border: none;
+		height: 300px;
+		padding-top: 70px;
+		padding-left: 0px;
+		width: 251px;
+	}
 }
