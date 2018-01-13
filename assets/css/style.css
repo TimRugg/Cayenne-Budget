@@ -116,6 +116,21 @@ a:active {
 	display: none;
 }
 
+#drop-row {
+	background-color: #eff0f2;
+}
+
+#drop {
+	background-color: #ccc;
+	height: 40%;
+	width: 	40%;
+	margin: 25px 10px;
+}
+
+#welcome {
+	padding: 15px 0px 15px 0px;
+}
+
 @media only screen and (max-width: 991px) {
 	.navbar-right {
 		margin-right: 20px;
