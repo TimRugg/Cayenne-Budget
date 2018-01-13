@@ -28,7 +28,6 @@ var auth = firebase.auth();
     });
 
     $(".success").removeClass("hide");
-    $("#log-out-button").removeClass("hide");
   });
 
   // logging in user
@@ -45,8 +44,6 @@ var auth = firebase.auth();
       // ...
 
     });
-    $("#log-out-button").removeClass("hide");
-    console.log("success!");
   });
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -64,8 +61,27 @@ var auth = firebase.auth();
     }).catch(function(error) {
       // An error happened.
     });
-
     $("#log-out-button").addClass("hide");
   });
+
+
+  // NYT article API
+
+  NYTapiKey = "578476336d494beaaf4d0137c3d64149";
+
+  var NYTurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+  NYTurl += '?' + $.param({
+    'api-key': "578476336d494beaaf4d0137c3d64149",
+    'q': "finance",
+    'begin_date': "20170101"
+  });
+  //calling ajax
+  $.ajax({
+      url: NYTurl,
+      method: "GET"
+  }).done(function(response) {
+    console.log(response);
+  });
+
 });
 

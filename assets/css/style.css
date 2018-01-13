@@ -112,8 +112,16 @@ a:active {
 	padding-bottom: 6px;
 }
 
+#log-out-button {
+	margin-left: 8px;
+}
+
 .hide {
 	display: none;
+}
+
+.success {
+	margin-right: 15px;
 }
 
 @media only screen and (max-width: 991px) {
