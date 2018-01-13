@@ -112,23 +112,16 @@ a:active {
 	padding-bottom: 6px;
 }
 
+#log-out-button {
+	margin-left: 8px;
+}
+
 .hide {
 	display: none;
 }
 
-#drop-row {
-	background-color: #eff0f2;
-}
-
-#drop {
-	background-color: #ccc;
-	height: 40%;
-	width: 	40%;
-	margin: 25px 10px;
-}
-
-#welcome {
-	padding: 15px 0px 15px 0px;
+.success {
+	margin-right: 15px;
 }
 
 @media only screen and (max-width: 991px) {
