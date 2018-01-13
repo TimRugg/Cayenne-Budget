@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Cayenne</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- javascript -->
+  <script src="assets/javascript/javascript.js"></script>
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id='orange-header'>
+        <span class="modal-title" id="modal-title-text">Sign up</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        	<form>
+				<p id='input-name'>
+				Name:
+				</p>
+
+				<input type="name" name="name" class='input-field' id='user-name'>
+
+				<p id='input-email'>
+				Email:
+				</p>
+				<input type="email" name="email" class='input-field' id='user-email'>
+
+				<p id='input-password'>
+				Password:
+				</p>
+				<input type="password" name="psw" class='input-field' id='user-password'>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="orange-button" id='sign-up-button'>Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class='navbar-right'>
+			<a href='about.html' id='about-link'>About Us</a>
+			<a href='contact.html' id='contact-link'>Contact</a>
+		</div>
+
+	</nav>
+
+	<div class='container'>
+
+		<div class='row'>
+
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6' id='brand'>
+				<img src='assets/images/logoplaceholder.png' id='logo'><br>
+				<h1>Cayenne</h1>
+			</div>
+
+			<div class='col-xs-4 col-sm-4'>
+			</div>
+
+			<div class='col-xs-4 col-sm-4 col-md-6 col-lg-6 col-xl-6' id='form'>
+				<form>
+					<p id='email'>
+					Email:
+					</p>
+
+					<input type="text" name="username" class='input-field'>
+
+					<p id='password'>
+					Password:
+					</p>
+					<input type="password" name="psw" class='input-field'><br>
+
+					<input type='submit' value='Log in' class='orange-button'> 
+					<button type="button" id='sign-up' data-toggle="modal" data-target="#myModal">Sign up</button>
+
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

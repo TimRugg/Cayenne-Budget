@@ -1,0 +1,164 @@
+body {
+	background-color: #fff;
+    color: #999999;
+    font-size: 16px;
+}
+
+h1 {
+	color: #1e1e1e;
+	font-size: 3.5em;
+	font-family: 'Syncopate', sans-serif;
+}
+
+#modal-title-text {
+	font-size: 2em;
+	color: white;
+}
+
+#orange-header {
+	background-color: #f7941d;
+}
+
+.navbar {
+	height: 40px;
+	background-color: #f7941d;
+	border: none;
+	color: #fff;
+}
+
+.navbar-right {
+	margin-right: 20px;
+	margin-top: 13px;
+	width: 145px;
+}
+
+#about-link {
+	padding-right: 10px;
+	border-right: 1px solid;
+	line-height: 1.3em;
+}
+
+#contact-link {
+	padding-left: 5px;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#brand {
+	text-align: center;
+	margin-top: 100px;
+}
+
+#logo {
+	width: 150px;
+	margin-bottom: 20px;
+}
+
+#form {
+	margin-top: 60px;
+	border-left: 2px solid #cccccc;
+	height: 300px;
+	padding-top: 70px;
+	padding-left: 60px;
+
+}
+
+.input-field {
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid;
+	border-color: #bcbcbc;
+	width: 250px;
+	margin-bottom: 30px;
+}
+
+.orange-button {
+	background-color: #f7941d;
+	border: none;
+	color: white;
+	width: 80px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-right: 10px;
+}
+
+#sign-up {
+	background-color: white;
+	border: 1px #1e1e1e solid;
+	color: #1e1e1e;
+	width: 80px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.hide {
+	display: none;
+}
+
+@media only screen and (max-width: 991px) {
+	.navbar-right {
+		margin-right: 20px;
+		margin-top: 13px;
+	}
+
+	#form {
+		margin: auto;
+		border: none;
+		height: 300px;
+		padding-top: 70px;
+		padding-left: 0px;
+		width: 251px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar-right {
+		margin: auto;
+		margin-top: 13px;
+	}
+
+	#form {
+		margin: auto;
+		border: none;
+		height: 300px;
+		padding-top: 70px;
+		padding-left: 0px;
+		width: 251px;
+	}
+}
+
+#drop-row {
+	background-color: #eff0f2;
+}
+
+#drop {
+	background-color: #ccc;
+	height: 40%;
+	width: 	40%;
+	margin: 25px 10px;
+}
+
+#welcome {
+	padding: 15px 0px 15px 0px;
+}
