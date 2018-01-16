@@ -3,9 +3,9 @@ var fileName;
 
 function setup() {
   // put setup code here
-  cnv = createCanvas(200, 300);
+  cnv = createCanvas(350, 400);
   cnv.parent('drop');
-  background(0);
+  background(0,0,0,0);
 
   	cnv.drop(gotFile);
 }
@@ -18,15 +18,3 @@ function gotFile(file) {
 	image(img, 0, 0, width, height);
 }
 
-// function saveToDrive() {
-//  $('.g-savetodrive').attr('data-src=', img);
-// }
-// function draw() {
-//   // put drawing code here
-// }
-
-$('.g-savetodrive').on('click', function() {
-		$('.g-savetodrive').attr('data-src=', img);
-		$('.g-savetodrive').data('filename', fileName);
-
-});

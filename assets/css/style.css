@@ -19,11 +19,23 @@ h1 {
 	background-color: #f7941d;
 }
 
-.navbar {
+#navbar-home {
 	height: 40px;
 	background-color: #f7941d;
 	border: none;
 	color: #fff;
+}
+
+#nav-logo {
+	height: 47px;
+	margin-left: 5px;
+	margin-top: -26px;
+}
+
+#nav-logo-text {
+	color: #1e1e1e;
+	font-size: 2.5em;
+	font-family: 'Syncopate', sans-serif;
 }
 
 .navbar-right {
@@ -41,6 +53,16 @@ h1 {
 #contact-link {
 	padding-left: 5px;
 }
+
+#nav-budget {
+	height: 60px;
+	background-color: #fff;
+	border-bottom-style: solid;
+    border-bottom-color: #f7941d;
+    border-bottom-width: 12px;
+	color: #fff;
+}
+
 
 /* unvisited link */
 a:link {
@@ -63,6 +85,30 @@ a:hover {
 a:active {
     color: white;
     text-decoration: none;
+}
+
+a#about-link-budget {
+	padding-right: 10px;
+	border-right: 1px solid;
+	/*line-height: 1.3em;*/
+	color: #f7941d;
+}
+
+a#contact-link-budget {
+	padding-left: 5px;
+	border-right: 1px solid;
+	color: #f7941d;
+}
+
+a#articles-link-budget {
+	padding-left: 5px;
+	border-right: 1px solid;
+	color: #f7941d;
+}
+
+a#deals-link-budget {
+	padding-left: 5px;
+	color: #f7941d;
 }
 
 #brand {
@@ -132,13 +178,35 @@ a:active {
 
 #drop {
 	background-color: #ccc;
-	height: 40%;
+	height: 500px;
 	width: 	40%;
 	margin: 25px 10px;
 }
 
 #welcome {
 	padding: 15px 0px 15px 0px;
+}
+
+#addTransaction {
+	background-color: transparent;
+	margin: 20px 0px 20px 25px;
+}
+
+#deals {
+	background-color: #eff0f2;
+}
+
+.deal-title {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.deal-hr {
+	color: #f7941d;
+}
+
+.deal-link {
+	color:#ff5400;
 }
 
 a.article-title:link {
