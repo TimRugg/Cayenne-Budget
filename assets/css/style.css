@@ -170,6 +170,8 @@ a#deals-link-budget {
 	margin-right: 15px;
 }
 
+/* budget.html styles */
+
 #drop-row {
 	background-color: #eff0f2;
 }
@@ -207,6 +209,53 @@ a#deals-link-budget {
 	color:#ff5400;
 }
 
+a.article-title:link {
+	font-size: 2em;
+	color: #999;
+}
+
+a.article-title:visited {
+	font-size: 2em;
+	color: #999;
+}
+
+a.article-title:hover {
+	font-size: 2em;
+	color: #bababa;
+}
+
+a.article-title:active {
+	font-size: 2em;
+	color: #999;
+}
+
+.article-snippet {
+	color: #bababa;
+}
+
+a.read-more:link {
+	color: #999;
+}
+
+a.read-more:visited {
+	color: #999;
+}
+
+a.read-more:hover {
+	color: #bababa;
+}
+
+a.read-more:active {
+	color: #999;
+}
+
+.article-div {
+	margin-top: 30px;
+	border-top: 2px solid #bababa;
+	padding-top: 10px;
+}
+
+/* media query */
 @media only screen and (max-width: 991px) {
 	.navbar-right {
 		margin-right: 20px;

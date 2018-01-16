@@ -27,6 +27,12 @@ var auth = firebase.auth();
       var errorMessage = error.message;
     });
 
+    firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    }).catch(function(error) {
+    // An error happened.
+    });
+
     $(".success").removeClass("hide");
   });
 
@@ -41,8 +47,12 @@ var auth = firebase.auth();
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // ...
+    });
 
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        open("budget.html","_self");
+      }
     });
   });
 
@@ -64,23 +74,56 @@ var auth = firebase.auth();
     $("#log-out-button").addClass("hide");
   });
 
-
   // NYT article API
-
-  NYTapiKey = "578476336d494beaaf4d0137c3d64149";
+  // date not working in NYTurl object, find out why?
+  var date = moment().subtract(7, "days").format("YYYYMMDD");
+  var NYTapiKey = "578476336d494beaaf4d0137c3d64149";
 
   var NYTurl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+
   NYTurl += '?' + $.param({
     'api-key': "578476336d494beaaf4d0137c3d64149",
     'q': "finance",
-    'begin_date': "20170101"
+    'begin_date': date
   });
+
   //calling ajax
   $.ajax({
       url: NYTurl,
       method: "GET"
   }).done(function(response) {
-    console.log(response);
+    for(var i = 0; i < 3; i++){
+      // creating variables to hold JSON data
+      var title = response.response.docs[i].headline.main;
+
+      var link = response.response.docs[i].web_url;
+
+      var snippet = response.response.docs[i].snippet;
+
+      // creating variables to hold html elements
+      var articleDiv = $("<div>");
+
+      var titleLink = $("<a>");
+
+      var snippetText = $("<p>");
+
+      var readMore = $("<a>");
+
+      //inserting info into new elements
+      titleLink.attr("href", link).text(title);
+      titleLink.addClass("article-title");
+
+      snippetText.text(snippet);
+      snippetText.addClass("article-snippet");
+
+      readMore.attr("href", link).text(" Read more...");
+      readMore.addClass("read-more")
+      snippetText.append(readMore);
+
+      articleDiv.append(titleLink, snippetText);
+      articleDiv.addClass("article-div col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4")
+      $("#NYT-articles").append(articleDiv);
+    }
   });
 
 });
