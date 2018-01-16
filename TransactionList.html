@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Transaction</title>
+	<title>Transaction List</title>
    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -11,25 +11,49 @@
 </head>
 <body>
 
-<!-- next line to be deleted -->
-<p><a href="TransactionList.html">Link to Transaction List</a></p>
+<!-- Next line to be deleted -->
+<p><a href="SaveTransaction.html">Link to Add Transactions</a></p>
 <p><a href="MonthlyBudget.html">Link to Monthly Budget</a></p>
 
 <div class=container>
 
 <div>
+	<div class="col-sm-9">
+		<br>
+		<div class="panel" id="tableTransactions">
+			<div class="panel-heading">
+				<h4 class="panel-title">All Transactions</h4>
+			</div>
+			<div class="panel-body">
+				<table class="table table-striped" id="tableTransactionsHeaders">
+					<thead>
+						<tr>
+							<th scope="col">Date</th>
+							<th scope="col">Source</th>	
+							<th scope="col">Total Amount</th>
+							<th scope="col">Category</th>
+							<th scope="col">Image</th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody class="table table-striped" id="tableTransactionsList">
+						<!-- this is where transactions will display using jQuery -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<div>
 	<div class="col-sm-3">
 	<br>
-		<div class="panel" id="addTransaction">
+		<div class="panel" id="updateTransaction">
 			<div class="panel-heading">
 				<h4 class="panel-title">Transaction</h4>
 			</div>
 			<div class="panel-body">
 				<form role="form">
-					<div class="form-group">
-						<label for="inputImage">Image</label>
-						<input type="file" id="inputImage">
-					</div>					
 					<div class="form-group">
 						<label for="inputSource">Source</label>
 						<input type="text" class="form-control" id="inputSource" placeholder="bank or store name" required>
@@ -52,47 +76,22 @@
   						  <option value="Miscellaneous">Miscellaneous</option>
 						</select>
 					</div>
-
-					<button type="submit" id="buttonInputTransaction">Submit</button>
+					<div class="form-group">
+						<label for="inputHasImage">Image</label>
+						<input type="text" class="form-control" id="inputHasImage" disabled>  
+					</div>
+					<!-- addedDate is a system fields - hidden here for use in JS to not erase on update -->
+					<input type=hidden id="addedDate">
+				<button type="submit" id="buttonUpdateTransaction">Update</button>
+				<button type="submit" id="buttonDeleteTransaction">Delete</button>
 				</form>
 			</div>
 		</div>
 	</div>
 </div>
 
-<!-- <div>
-	<div class="col-sm-9">
-		<br>
-		<div class="panel" id="tableTransactions">
-			<div class="panel-heading">
-				<h4 class="panel-title">All Transactions</h4>
-			</div>
-			<div class="panel-body">
-				<table class="table table-striped" id="tableTransactionsHeaders">
-					<thead>
-						<tr>
-							<th scope="col">Date</th>
-							<th scope="col">Source</th>	
-							<th scope="col">Total Amount</th>
-							<th scope="col">Category</th>
-							<th scope="col">Image?</th>
-							<th scope="col"></th>
-						</tr>
-					</thead>
-					<tbody class="table table-striped" id="tableTransactionsList"> 
--->
-						<!-- this is where transactions will display using jQuery -->
-<!--
- 					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>	
-</div> 
--->
-
 </div> <!-- end of container -->
 
-<script src="assets/javascript/SaveTransaction.js" type="text/javascript"></script>
+<script src="assets/javascript/TransactionList.js" type="text/javascript"></script>
 </body>
 </html>
