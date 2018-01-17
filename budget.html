@@ -35,15 +35,16 @@
 <body>
 		<!-- nav bar -->
 	<nav class="navbar navbar-default navbar-static-top animated slideInDown" id='nav-budget'>
-		<div class='navbar-right'>
-			<a href='about.html' id='about-link-budget'>About Us</a>
-			<a href='contact.html' id='contact-link-budget'>Contact</a>
-			<a href='#articles' id='articles-link-budget'>Articles</a>
-			<a href='#deals' id='deals-link-budget'>Deals</a>
-		</div>
-		<div class='navbar-left'>
+		<div class='navbar-left' id='navbar-left-div'>
 			<img src='assets/images/cayenne-logo.png' id='nav-logo'>
 			<span id='nav-logo-text'>Cayenne</span>
+		</div>
+		<div class='navbar-right' id='budget-nav-items'>
+			<a href='about.html' id='about-link-budget' class='left-link'>About Us</a>
+			<a href='mailto:projectonecayenne@gmail.com' id='contact-link-budget' class='left-link'>Contact</a>
+			<a href='#articles' id='articles-link-budget' class='left-link'>Articles</a>
+			<a href='#deals' id='deals-link-budget'>Deals</a>
+			<button type='button' class='orange-button log-out-button' id='main-log-out'>Log out</button>
 		</div>
 
 	</nav>
@@ -179,15 +180,16 @@
 <!-- Personal Finance Articles -->
 <div class='container-fluid'>
 		<div class='row' id="articles">
-					<div class='container'>
-						<div class='row'>
-							<article class='col-xs-12 col-sm-12 col-md-12' id='NYT-articles'>
-									
-							</article>
-						</div>
-				    </div>
+				<div class='container'>
+					<div class='row'>
+						<h2 class="text-center"><a name="#deals"></a>Articles</h2>
+						<article id='NYT-articles'>
+								
+						</article>
+					</div>
+			    </div>
 		</div>
-</div>	
+</div>		
 
 <!-- New Deals -->
 <div class='container-fluid'>

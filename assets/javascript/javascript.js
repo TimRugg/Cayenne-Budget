@@ -38,8 +38,8 @@ var auth = firebase.auth();
   });
 
   // logging in user
-  $("#log-in-button").on("click", function(){
-    // event.preventDefault();
+  $("#log-in-button").on("click", function(event){
+    event.preventDefault();
     var email = $("#username-return").val().trim();
     var password = $("#password-return").val().trim();
 
@@ -59,20 +59,24 @@ var auth = firebase.auth();
 
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    $("#log-out-button").removeClass("hide");
+    $(".log-out-button").removeClass("hide");
   } else {
-    $*("#log-out-button").addClass("hide");
+    $*(".log-out-button").addClass("hide");
   }
 });
 
   // log out
-  $("#log-out-button").on("click", function(){
+  $(".log-out-button").on("click", function(){
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
     }).catch(function(error) {
       // An error happened.
     });
-    $("#log-out-button").addClass("hide");
+    $(".log-out-button").addClass("hide");
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        open("index.html","_self");
+    });
   });
 
   // NYT article API
@@ -133,7 +137,7 @@ var auth = firebase.auth();
 
 var currentBudgetRecord = "unset";
 
-function displayList(recordKey, outputCategory, outputAmount) {
+function displayBudgetList(recordKey, outputCategory, outputAmount) {
     //build table to display category records on page
     $("#tableCategoryList").append(
          "<tr id='" + recordKey + "'><td>" +  outputCategory + 
@@ -209,7 +213,7 @@ $("#buttonDeleteCategory").on("click",function(event){
 // this section initially fills the table
 databaseRef.ref("budget").orderByChild("Category").on("child_added",function(snapshot){
     //pass values from snapshot to function that builds row by row
-    displayList(snapshot.key,snapshot.val().Category,snapshot.val().Total);
+    displayBudgetList(snapshot.key,snapshot.val().Category,snapshot.val().Total);
 });
 
 /////////////////////////////////////////////
