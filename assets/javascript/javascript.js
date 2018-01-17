@@ -38,7 +38,7 @@ var auth = firebase.auth();
 
   // logging in user
   $("#log-in-button").on("click", function(){
-    event.preventDefault();
+    // event.preventDefault();
     var email = $("#username-return").val().trim();
     var password = $("#password-return").val().trim();
 
