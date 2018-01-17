@@ -14,7 +14,7 @@
 // };
 
 // firebase.initializeApp(config);
-// var databaseRef = firebase.database();
+var databaseRef = firebase.database();
 var inputImageFile = "";
 var newKey = "";
 
