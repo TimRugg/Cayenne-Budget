@@ -133,7 +133,7 @@ var auth = firebase.auth();
 
 var currentBudgetRecord = "unset";
 
-function displayList(recordKey, outputCategory, outputAmount) {
+function displayBudgetList(recordKey, outputCategory, outputAmount) {
     //build table to display category records on page
     $("#tableCategoryList").append(
          "<tr id='" + recordKey + "'><td>" +  outputCategory + 
@@ -142,7 +142,7 @@ function displayList(recordKey, outputCategory, outputAmount) {
          "</td></tr>");
     //create an update button listeners for each category
     $("#btn"+recordKey).on("click",function(event){
-        console.log("update category: " + recordKey);
+        // console.log("update category: " + recordKey);
         updateCategory(recordKey,outputCategory,outputAmount);
     });
 };
@@ -171,9 +171,8 @@ $("#buttonAddCategory").on("click",function(event){
     var updatedTotalx = $("#budgetTotal").val().trim();
     var updatedTotal = parseFloat(updatedTotalx).toFixed(2); // transform to store two characters
     // from the form values build an object representing the category
-
-console.log("category: " + updatedCategory);
-console.log("total: " + updatedTotal);
+    // console.log("category: " + updatedCategory);
+    // console.log("total: " + updatedTotal);
 
     databaseRef.ref("budget").push({
         Category: updatedCategory,
@@ -206,10 +205,11 @@ $("#buttonDeleteCategory").on("click",function(event){
     databaseRef.ref("budget").child(deleteRecordKey).remove();
 });
 
+// console.log("Monthly Budget Load Run");
 // this section initially fills the table
 databaseRef.ref("budget").orderByChild("Category").on("child_added",function(snapshot){
     //pass values from snapshot to function that builds row by row
-    displayList(snapshot.key,snapshot.val().Category,snapshot.val().Total);
+    displayBudgetList(snapshot.key,snapshot.val().Category,snapshot.val().Total);
 });
 
 /////////////////////////////////////////////
@@ -276,7 +276,7 @@ function displayList(recordKey, outputSource, outputDate, outputAmount, outputCa
          "</td></tr>");
     //create an update button listeners for each transaction
     $("#btn"+recordKey).on("click",function(event){
-        console.log("update transaction: " + recordKey);
+        // console.log("update transaction: " + recordKey);
         updateTransaction(recordKey,outputSource,outputDate,outputAmount,outputCategory,outputHasImage,dateAdded);
     });
 };
@@ -343,12 +343,12 @@ $("#buttonDeleteTransaction").on("click",function(event){
 ///////////////////////////
 // DOES NOT DELETE IMAGE //
 ///////////////////////////
-console.log("Delete Transaction: " + deleteRecordKey);
+// console.log("Delete Transaction: " + deleteRecordKey);
 
     var storageRef = firebase.storage().ref(deleteRecordKey);
 
-console.log(storageRef);
-console.log("middle of delete");
+// console.log(storageRef);
+// console.log("middle of delete");
 
     // Delete the file
     ///////////// THIS DOES NOT RUN
@@ -360,15 +360,15 @@ console.log("middle of delete");
         console.log("No file deleted");
     });
 
-console.log("end of delete");
+// console.log("end of delete");
 
 });
 
 // this section initially fills the table
 databaseRef.ref("transaction").orderByChild("TransDate").startAt(lastMonth).on("child_added",function(snapshot){
-    //pass values from snapshot to function that builds row by row
-    displayList(snapshot.key,snapshot.val().Source,snapshot.val().TransDate,snapshot.val().Total,snapshot.val().Category,snapshot.val().HasImage,snapshot.val().dateAdded);   
-    // console.log("Firebase child key: " + snapshot.key);
+   //pass values from snapshot to function that builds row by row
+   displayList(snapshot.key,snapshot.val().Source,snapshot.val().TransDate,snapshot.val().Total,snapshot.val().Category,snapshot.val().HasImage,snapshot.val().dateAdded);   
+   // console.log("Firebase child key: " + snapshot.key);
 });
 
 
