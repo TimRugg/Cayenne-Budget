@@ -38,13 +38,13 @@ h1 {
 	font-family: 'Syncopate', sans-serif;
 }
 
-.navbar-right {
+#navbar-index-items {
 	margin-right: 20px;
 	margin-top: 13px;
 	width: 145px;
 }
 
-#about-link {
+.left-link {
 	padding-right: 10px;
 	border-right: 1px solid;
 	line-height: 1.3em;
@@ -63,6 +63,9 @@ h1 {
 	color: #fff;
 }
 
+#budget-nav-items {
+	width: 410px;
+}
 
 /* unvisited link */
 a:link {
@@ -158,7 +161,7 @@ a#deals-link-budget {
 	padding-bottom: 6px;
 }
 
-#log-out-button {
+.log-out-button {
 	margin-left: 8px;
 }
 
@@ -171,6 +174,10 @@ a#deals-link-budget {
 }
 
 /* budget.html styles */
+
+#navbar-left-div {
+	width: 311px;
+}
 
 #drop-row {
 	background-color: #eff0f2;
@@ -250,14 +257,21 @@ a.read-more:active {
 }
 
 .article-div {
-	margin-top: 30px;
-	border-top: 2px solid #bababa;
-	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+#main-log-out {
+	margin-top: 5px;
 }
 
 /* media query */
 @media only screen and (max-width: 991px) {
-	.navbar-right {
+	#navbar-index-items {
+		margin-right: 20px;
+		margin-top: 13px;
+	}
+
+	#navbar-budget-items {
 		margin-right: 20px;
 		margin-top: 13px;
 	}
@@ -273,9 +287,22 @@ a.read-more:active {
 }
 
 @media only screen and (max-width: 768px) {
-	.navbar-right {
+	#navbar-index-items {
 		margin: auto;
 		margin-top: 13px;
+	}
+
+	#navbar-budget-items {
+		margin: auto;
+	}
+
+	#navbar-left-div {
+		width: 311px;
+		margin: auto;
+	}
+
+	#nav-budget {
+		height: 120px;
 	}
 
 	#form {
