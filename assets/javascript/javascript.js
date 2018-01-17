@@ -133,7 +133,7 @@ var auth = firebase.auth();
 
 var currentBudgetRecord = "unset";
 
-function displayList(recordKey, outputCategory, outputAmount) {
+function displayBudgetList(recordKey, outputCategory, outputAmount) {
     //build table to display category records on page
     $("#tableCategoryList").append(
          "<tr id='" + recordKey + "'><td>" +  outputCategory + 
@@ -209,7 +209,7 @@ $("#buttonDeleteCategory").on("click",function(event){
 // this section initially fills the table
 databaseRef.ref("budget").orderByChild("Category").on("child_added",function(snapshot){
     //pass values from snapshot to function that builds row by row
-    displayList(snapshot.key,snapshot.val().Category,snapshot.val().Total);
+    displayBudgetList(snapshot.key,snapshot.val().Category,snapshot.val().Total);
 });
 
 /////////////////////////////////////////////

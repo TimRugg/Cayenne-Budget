@@ -205,7 +205,9 @@ a#deals-link-budget {
 	color: #f7941d;
 }
 
-.deal-link {
+a.deal-link {
+	font-weight: bold;
+	font-style: italic;
 	color:#ff5400;
 }
 

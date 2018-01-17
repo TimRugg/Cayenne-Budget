@@ -50,7 +50,7 @@
 
 <!-- welcome message - current budget status -->
 <div class='container-fluid'>
-		<div class='row' id="welcome">
+		<div class='row animated slideInUp' id="welcome">
 		<div class='container'>
 		<div class='row' id="monthly-budget">
 		<div>
@@ -175,6 +175,38 @@
 		</div>
 
 	</div>
+
+<div class=container>
+
+<div>
+	<div class="col-sm-12">
+		<br>
+		<div class="panel" id="tableTransactions">
+			<div class="panel-heading">
+				<h4 class="panel-title">All Transactions</h4>
+			</div>
+			<div class="panel-body">
+				<table class="table table-striped" id="tableTransactionsHeaders">
+					<thead>
+						<tr>
+							<th scope="col">Date</th>
+							<th scope="col">Source</th>	
+							<th scope="col">Total Amount</th>
+							<th scope="col">Category</th>
+							<th scope="col">Image</th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody class="table table-striped" id="tableTransactionsList">
+						<!-- this is where transactions will display using jQuery -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>	
+</div>
+
+</div>	
 
 <!-- Personal Finance Articles -->
 <div class='container-fluid'>
