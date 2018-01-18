@@ -64,7 +64,9 @@ h1 {
 }
 
 #budget-nav-items {
-	width: 410px;
+	width: 381px;
+	margin-right: 0px;
+	padding-right: 0px;
 }
 
 /* unvisited link */
@@ -191,7 +193,7 @@ a#deals-link-budget {
 }
 
 #welcome {
-	padding: 15px 0px 15px 0px;
+	padding: 15px 0px 0px 0px;
 }
 
 #addTransaction {
@@ -307,7 +309,7 @@ a.read-more:active {
 	}
 
 	#navbar-budget-items {
-		margin-right: 20px;
+		padding-right: 20px;
 		margin-top: 13px;
 	}
 
