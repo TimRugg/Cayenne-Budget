@@ -1,6 +1,6 @@
 
 $.getJSON(
-        "http://www.reddit.com/r/deals.json",
+        "https://www.reddit.com/r/deals.json",
         function getDeals(data)
         {
           $.each(
