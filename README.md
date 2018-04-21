@@ -7,9 +7,9 @@ Make budgeting a snap with Cayenne! Our app makes it easy to record your monthly
 * See deals from Reddit
 * See stories from 
 
-#Uses Firebase for authentication, database, and image storage.
+# Uses Firebase for authentication, database, and image storage.
 
-#Technologies and Libraries
+# Technologies and Libraries
 * HTML
 * Javascript
 * jQuery
